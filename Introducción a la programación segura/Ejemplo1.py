@@ -1,9 +1,21 @@
 import math
+pi = math.pi
 
-radio = float(input("Ingrese el radio de la circunferencia: "))
-area = math.pi * radio ** 2
-print(area)
+def area_circunferencia(radio):
+    area = pi * radio ** 2
+    return area
 
-raiz_cuadrada = math.sqrt(radio)
-print()
-print(raiz_cuadrada)
+def volumen_esfera(radio):
+    volumen = 4/3 * pi * radio ** 3
+    return volumen
+
+def ejecutar_codigo():
+    radio = float(input("Ingrese el radio de una circunferencia: "))
+    print()
+    area_circ = area_circunferencia(radio)
+    print(f"Area de circunferencia = {area_circ}")
+    print()
+    volumen_circ = volumen_esfera(radio)
+    print(f"Volumen de esfera = {volumen_circ}")
+
+ejecutar_codigo()
